@@ -10,7 +10,7 @@ RUN apt-get update && \
     libxext-dev \
     libxrender-dev libxtst-dev && \
   rm -rf /var/lib/apt/lists/* && \
-  wget http://downloadirpf.receita.fazenda.gov.br/irpf/${YEAR}/irpf/arquivos/IRPF2020-${VERSION}.zip -O irpf.zip && \
+  wget http://downloadirpf.receita.fazenda.gov.br/irpf/${YEAR}/irpf/arquivos/IRPF${YEAR}-${VERSION}.zip -O irpf.zip && \
   unzip irpf.zip -d /opt/ && \
   mv /opt/IRPF*/ /opt/irpf && \
   groupadd --gid 1000 irpf && \
